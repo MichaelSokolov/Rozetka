@@ -10,24 +10,25 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class MainPage extends BaseUtil{
 
-
-
-    @FindBy(xpath = "//div[@class='notificationPanelBlock']") WebElement alert_dismiss;
-    @FindBy(xpath = "//a[@href='/lv/']") WebElement link_ToSwitchLv;
-    @FindBy(xpath = "//h2/a[@href='/ru/electronics/']") WebElement button_MenuElectronics;
-
-
     public MainPage(WebDriver driver) {
         super(driver);
     }
+
+    @FindBy(xpath = "//div[@class='notificationPanelBlock']") WebElement alert_dismiss;
+    @FindBy(xpath = "//*[@id='3361']/a") WebElement menu_item_phones;
 
     public void dismissAlert(){
         wait.until(ExpectedConditions.visibilityOf(alert_dismiss));
         alert_dismiss.click();
     }
-    public void clickMenuElectronics (){
-        button_MenuElectronics.click();
+
+    public void clickMenuPhones(){
+        wait.until(ExpectedConditions.elementToBeClickable(menu_item_phones));
+        menu_item_phones.click();
     }
+
+
+
 
 
 
