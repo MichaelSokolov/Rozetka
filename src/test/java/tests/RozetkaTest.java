@@ -45,7 +45,7 @@ public class RozetkaTest {
     public void openMainPage(){
         driver.get("http://rozetka.com.ua/");
         driver.manage().window().maximize();
-        //Assert.assertEquals(driver.getTitle(), "Интернет-магазин ROZETKA™: фототехника, видеотехника, аудиотехника, компьютеры и компьютерные комплектующие", "Title of web page is wrong. Please check URL" );
+//        Assert.assertEquals(driver.getTitle(), "Интернет-магазин ROZETKA™: фототехника, видеотехника, аудиотехника, компьютеры и компьютерные комплектующие", "Title of web page is wrong. Please check URL" );
     }
 
     @Test(dependsOnMethods = "openMainPage")
@@ -54,7 +54,7 @@ public class RozetkaTest {
         mainpage.clickMenuPhones();
         phonestv.clickPhonesLink();
         phones.clickSmartphoneslink();
-        resultspage.addToArrayFromResult(3);
+        resultspage.addToArrayFromResult(3);//number of pages to scroll
         resultspage.setUpDataBase();
         resultspage.save();
         resultspage.tearDownDataBase();

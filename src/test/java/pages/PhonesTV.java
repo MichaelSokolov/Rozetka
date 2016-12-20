@@ -13,7 +13,7 @@ public class PhonesTV extends BaseUtil{
         super(driver);
     }
 
-    @FindBy(xpath = "//a[text()='Телефоны']") WebElement menu_phones;
+    @FindBy(xpath = "(//a[contains(@href, '/telefony/')])[1]") WebElement menu_phones;
 
 
 

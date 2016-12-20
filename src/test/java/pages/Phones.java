@@ -13,7 +13,7 @@ public class Phones extends BaseUtil{
         super(driver);
     }
 
-    @FindBy (xpath = "//a[text()='Смартфоны']") WebElement menu_smartphones;
+    @FindBy (xpath = "(//a[contains(@href, 'smartfon/')])[1]") WebElement menu_smartphones;
 
     public void clickSmartphoneslink(){
         wait.until(ExpectedConditions.elementToBeClickable(menu_smartphones));
