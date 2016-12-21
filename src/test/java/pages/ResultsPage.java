@@ -18,8 +18,6 @@ public class ResultsPage extends BaseUtil{
     }
     public ArrayList<Item> items = new ArrayList<Item>();
     private Connection connection;
-    private static Statement statement;
-    private static ResultSet rs;
 
 
     @FindAll({@FindBy(xpath = "//i[contains(@class,'middle-popularity')]//ancestor::div[3]//div[@class='g-price-uah']")})
